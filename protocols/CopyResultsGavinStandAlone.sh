@@ -9,7 +9,11 @@
 #string logsDir
 #string groupname
 #string tmpDataDir
-
+#string inputVcf
 
 cp ${intermediateDir}/*.GAVIN.rlv.vcf ${tmpDataDir}/GavinSA/output/
 echo "copied ${intermediateDir}/*.GAVIN.rlv.vcf ${tmpDataDir}/GavinSA/output/"
+
+name=$(basename "${inputVcf}" ".vcf")
+
+touch "${tmpDataDir}/GavinSA/${name}.finished"
