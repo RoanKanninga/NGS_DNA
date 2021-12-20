@@ -10,6 +10,9 @@ jobs:
       - checkout
       - run: echo "A first hello"
       - run: mkdir -p my_workspace
+      - add_ssh_keys:
+            fingerprints:
+              - "27:10:7e:e1:06:2f:43:5b:49:8e:9b:6d:74:21:90:a0"
       - run: echo "Trying out workspaces" > my_workspace/echo-output
       - persist_to_workspace:
           # Must be an absolute path, or relative path from working_directory
