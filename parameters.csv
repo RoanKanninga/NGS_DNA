@@ -148,6 +148,7 @@ sampleMergedBamIdx,${samplePrefix}.merged.bam.bai
 dedupBam,${projectResultsDir}/alignment/${externalSampleID}.merged.dedup.bam
 dedupBamIdx,${projectResultsDir}/alignment/${externalSampleID}.merged.dedup.bam.bai
 dedupBamMetrics,${projectResultsDir}/qc/statistics/${externalSampleID}.merged.dedup.bam
+dedupBamChrXMetrics,${projectResultsDir}/qc/${externalSampleID}.merged.dedup.bam
 dedupBamCram,${projectResultsDir}/alignment/${externalSampleID}.merged.dedup.bam.cram
 dedupBamCramIdx,${projectResultsDir}/alignment/${externalSampleID}.merged.dedup.bam.cram.crai
 dedupBamCramBam,${projectResultsDir}/alignment/${externalSampleID}.merged.dedup.bam.cram.bam
@@ -176,7 +177,7 @@ gcBiasMetricsJar,CollectGcBiasMetrics
 insertSizeMetrics,${dedupBamMetrics}.insert_size_metrics
 hsMetricsJar,CalculateHsMetrics
 hsMetrics,${dedupBamMetrics}.hs_metrics
-hsMetricsNonAutosomalRegionChrX,${dedupBamMetrics}.nonAutosomalRegionChrX_hs_metrics
+hsMetricsNonAutosomalRegionChrX,${dedupBamChrXMetrics}.nonAutosomalRegionChrX_hs_metrics
 recreateInsertSizePdfR,createInsertSizePlot_c5.R
 projectDellyAnnotatorOutputVcf,${samplePrefix}.delly.snpeff.hpo.vcf
 collectBamMetricsPrefix,${intermediateDir}/${externalSampleID}.merged.dedup
