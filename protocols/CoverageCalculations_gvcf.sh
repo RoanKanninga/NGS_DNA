@@ -88,7 +88,7 @@ then
 			tabix -p vcf "${intermediateDir}/${externalSampleID}.merged.g.vcf.gz"
 		fi
 		module load "${ngsversion}"
-		module load ${pythonPlusVersion}
+		module load "${pythonPlusVersion}"
 		cp "${intermediateDir}/${externalSampleID}.merged.g.vcf.gz" "${variantCalls}"
 		python "${EBROOTNGS_DNA}/scripts/umcg_nx_cnv2vcf_gatk_transform_v01.py" -i "${variantCalls}"
 		
